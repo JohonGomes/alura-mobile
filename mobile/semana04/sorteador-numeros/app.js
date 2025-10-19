@@ -10,8 +10,10 @@ function sortear() {
     for (let i = 0; i < quantidade; i++) {
         if (de >= ate) {
             alert('O valor De deve ser menor que o Até!');
+            reiniciar();
+            return;
         }
-        reiniciar();
+        
 
         numero = obterNumeroAleatorio(de, ate);
 
