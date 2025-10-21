@@ -46,8 +46,6 @@ function alterarStatusBotao() {
         botao.classList.remove('container__botao');
         botao.classList.add('container__botao-desabilitado');
     }
-
-
 };
 
 function reiniciar() {
