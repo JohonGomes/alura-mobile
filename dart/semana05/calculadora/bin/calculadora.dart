@@ -1,16 +1,71 @@
 import 'dart:io';
 
 void main() {
-  double numeroUm = double.parse(stdin.readLineSync()!);
-  double numeroDois = double.parse(stdin.readLineSync()!);
-  print(numeroUm + numeroDois);
+  // double numeroUm = double.parse(stdin.readLineSync()!);
+  double numeroUm = 0;
+  double numeroDois = 0;
+  String operacao = "";
 
-  /*tipos no dart
-    int = numeros inteiros
-    double = numeros decimais
-    bool = boleanos
-    null = nulos
-    String = texto
-    List = listas / arrays
-  */
+  void soma() {
+    print(numeroUm + numeroDois);
+  }
+
+  void subtracao() {
+    print(numeroUm - numeroDois);
+  }
+
+  void divisao() {
+    print(numeroUm / numeroDois);
+  }
+
+  void multiplicacao() {
+    print(numeroUm * numeroDois);
+  }
+
+  void calcular() {
+    switch (operacao) {
+      case "+":
+        soma();
+
+      case "-":
+        subtracao();
+
+      case "*":
+        multiplicacao();
+
+      case "/":
+        divisao();
+        break;
+    }
+  }
+
+  print("Digite o primeiro valor:");
+
+  String? entrada = stdin.readLineSync();
+
+  if (entrada != null) {
+    if (entrada != "") {
+      numeroUm = double.parse(entrada);
+    }
+  }
+
+  print("Digite o operação valor:");
+
+  entrada = stdin.readLineSync();
+  if (entrada != null) {
+    operacao = entrada;
+  }
+
+  print("Digite o segundo valor:");
+
+  entrada = stdin.readLineSync();
+  if (entrada != null) {
+    if (entrada != "") {
+      numeroDois = double.parse(entrada);
+    }
+  }
+
+  print("O resultado da operação é:");
+
+  calcular();
 }
