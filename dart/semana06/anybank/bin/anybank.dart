@@ -1,5 +1,5 @@
 void main() {
-  // instanciando um objeto
+  // instanciando / criando  um objeto
   Conta contaJohon = Conta("Johon", 1000);
   Conta contaFrederico = Conta("Frederico", 2000);
 
@@ -9,6 +9,7 @@ void main() {
   // print(contaJohon.titular);
   // print(contaJohon.saldo);
 
+// for (Conta(classe) conta (nome da variavel, poder ser qualquer uma) in conta (nome da Lista que criei))
   for (Conta conta in contas){
     print(conta.titular);
     print(conta.saldo);
