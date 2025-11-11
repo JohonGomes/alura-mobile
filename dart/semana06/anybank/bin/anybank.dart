@@ -1,3 +1,5 @@
+import 'package:anybank/conta.dart';
+
 void main() {
   // instanciando / criando  um objeto
   Conta contaJohon = Conta("Johon", 1000);
@@ -9,29 +11,23 @@ void main() {
   // print(contaJohon.titular);
   // print(contaJohon.saldo);
 
-// for (Conta(classe) conta (nome da variavel, poder ser qualquer uma) in conta (nome da Lista que criei))
-  for (Conta conta in contas){
-    print(conta.titular);
-    print(conta.saldo);
+  // for (Conta(classe) conta (nome da variavel, poder ser qualquer uma) in conta (nome da Lista que criei))
+  for (Conta conta in contas) {
+    conta.imprimeSaldo();
+    // print(conta.titular);
+    // print(conta._saldo);
   }
 
   //alterando o saldo da conta, atribuindo um novo valor a ele.
 
-  print(contaFrederico.titular);
-  print(contaFrederico.saldo);
-  contaFrederico.saldo = 5000;
+  contaFrederico.receber(3000);
 
-  print(contaFrederico.saldo);
+  print("--- Recebendo um valor na conta ---");
+  // receber(contaJohon, 500);
+  contaJohon.receber(500);
+
+
+  print("--- Enviando um valor para outra conta ---");
+  // enviar(contaJohon, 200);
+  contaJohon.enviar(200);
 }
-
-//Criando uma classe
-class Conta {
-  // atributos da classe
-  String titular;
-  double saldo;
-
-  //função construtora
-  Conta(this.titular, this.saldo);
-}
-
-
