@@ -4,6 +4,8 @@ void main() {
   // instanciando / criando  um objeto
   Conta contaJohon = Conta("Johon", 1000);
   Conta contaFrederico = Conta("Frederico", 2000);
+  ContaCorrente contaCris = ContaCorrente("Cris", 4000);
+  ContaPoupanca contaDenize = ContaPoupanca("Denize", 4000);
 
   List<Conta> contas = <Conta>[contaJohon, contaFrederico];
 
@@ -26,8 +28,16 @@ void main() {
   // receber(contaJohon, 500);
   contaJohon.receber(500);
 
-
   print("--- Enviando um valor para outra conta ---");
   // enviar(contaJohon, 200);
   contaJohon.enviar(200);
+
+  contaCris.imprimeSaldo();
+  contaCris.enviar(4300);
+
+  contaDenize.imprimeSaldo();
+  contaDenize.enviar(4300);
+
+  contaDenize.calculaRendimento();
+  contaDenize.imprimeSaldo();
 }
